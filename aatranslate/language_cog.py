@@ -62,7 +62,7 @@ class LanguageDropdown(discord.ui.Select):
 
 class LanguageView(ui.View):
     """
-        View for picking a group to assign a help thread too
+        View for picking a the language
     """
 
     def __init__(self, message):
