@@ -22,3 +22,9 @@ AA_TRANSLATIONS_URL = getattr(
     'AA_TRANSLATIONS_URL',
     "http://libretranslate:9095"
 )
+
+AA_TRANSLATIONS_API_KEY = getattr(
+    settings,
+    'AA_TRANSLATIONS_API_KEY',
+    None
+)

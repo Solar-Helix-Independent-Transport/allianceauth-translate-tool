@@ -1,11 +1,19 @@
 from libretranslatepy import LibreTranslateAPI
 
-from .app_settings import AA_TRANSLATIONS_URL
+from .app_settings import AA_TRANSLATIONS_URL, AA_TRANSLATIONS_API_KEY
 
 
 class LibreTranslateClient:
     def __init__(self):
-        self.t = LibreTranslateAPI(AA_TRANSLATIONS_URL)
+        if AA_TRANSLATIONS_API_KEY:
+            self.t = LibreTranslateAPI(
+                AA_TRANSLATIONS_URL,
+                api_key=AA_TRANSLATIONS_API_KEY
+            )
+        else:
+            self.t = LibreTranslateAPI(
+                AA_TRANSLATIONS_URL
+            )
 
     def translate(self, text, source="auto", target="en"):
         output = self.t.translate(text, source, target)
