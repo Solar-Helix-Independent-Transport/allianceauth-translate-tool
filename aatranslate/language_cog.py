@@ -51,6 +51,7 @@ class LanguageDropdown(discord.ui.Select):
         self.message = message
 
     async def callback(self, interaction: discord.Interaction):
+        interaction.response.defer()
         translated = t.translate(self.message, target=self.values[0])
         await interaction.response.edit_message(
             content=(
