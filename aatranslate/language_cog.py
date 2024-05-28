@@ -12,6 +12,7 @@ from .app_settings import AA_TRANSLATIONS_LANGUAGES
 logger = logging.getLogger(__name__)
 
 
+### load from API and confirm they are available.
 # def get_languages():
 #     languages = t.languages()
 #     out = []
@@ -51,9 +52,9 @@ class LanguageDropdown(discord.ui.Select):
         self.message = message
 
     async def callback(self, interaction: discord.Interaction):
-        interaction.response.defer()
+        await interaction.response.defer()
         translated = t.translate(self.message, target=self.values[0])
-        await interaction.response.edit_message(
+        await interaction.edit(
             content=(
                 f"{translated} "
             ),
