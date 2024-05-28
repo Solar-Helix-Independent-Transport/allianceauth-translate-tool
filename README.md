@@ -6,19 +6,19 @@ https://github.com/LibreTranslate/LibreTranslate
 
 ## Features
 
-* AA-Discordbot Cog for translation of messages on discord.
+- AA-Discordbot Cog for translation of messages on discord.
 
 ## Installation
 
-* Install the app with your venv active
+- Install the app with your venv active
 
 ```bash
 pip install allianceauth-translate-tool
 ```
 
-* Add `'aatranslate',` to your INSTALLED_APPS list in local.py.
+- Add `'aatranslate',` to your INSTALLED_APPS list in local.py.
 
-* Add the below lines to your `local.py` settings file, Changing the contexts to yours.
+- Add the below lines to your `local.py` settings file, Changing the contexts to yours.
 
 ```python
 ## Settings for AA-Translate-Tool

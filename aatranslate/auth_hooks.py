@@ -1,8 +1,9 @@
 from allianceauth import hooks
-from allianceauth.authentication.models import State, UserProfile
-from allianceauth.services.hooks import MenuItemHook, UrlHook
 
-from . import app_settings, urls
+# from allianceauth.authentication.models import State, UserProfile
+# from allianceauth.services.hooks import MenuItemHook, UrlHook
+
+# from . import app_settings, urls
 
 """
 class CeleryMenu(MenuItemHook):

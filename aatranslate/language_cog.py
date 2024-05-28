@@ -5,14 +5,17 @@ import discord
 from discord import Message, ui
 from discord.ext import commands
 
-# AA Contexts
-from django.conf import settings
-from .providers import translate as t
 from .app_settings import AA_TRANSLATIONS_LANGUAGES
+from .providers import translate as t
+
+# AA Contexts
+# from django.conf import settings
+
+
 logger = logging.getLogger(__name__)
 
 
-### load from API and confirm they are available.
+# load from API and confirm they are available.
 # def get_languages():
 #     languages = t.languages()
 #     out = []

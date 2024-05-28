@@ -1,6 +1,6 @@
 from libretranslatepy import LibreTranslateAPI
 
-from .app_settings import AA_TRANSLATIONS_URL, AA_TRANSLATIONS_API_KEY
+from .app_settings import AA_TRANSLATIONS_API_KEY, AA_TRANSLATIONS_URL
 
 
 class LibreTranslateClient:
