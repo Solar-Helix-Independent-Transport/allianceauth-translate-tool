@@ -34,3 +34,6 @@ AA_TRANSLATIONS_LANGUAGES = [] # [("українець", "uk")]
 
 ![discord context menu showing app usage](docs/app_usage.png)
 
+## Libretranslate System Requirements
+
+Seems to be CPU bound using around 2gb of memory. On a 2 core, 4gb instance it takes around a minute to translate 60 words. 
