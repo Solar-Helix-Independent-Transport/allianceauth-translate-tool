@@ -33,6 +33,7 @@ AA_TRANSLATIONS_LANGUAGES = [] # [("українець", "uk")]
 ## Usage
 
 ![discord context menu showing app usage](docs/app_usage.png)
+![bot response to clicking the app in the context menu](docs/message.png)
 
 ## Libretranslate System Requirements
 
