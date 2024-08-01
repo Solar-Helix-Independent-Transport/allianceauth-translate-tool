@@ -24,6 +24,17 @@ pip install allianceauth-translate-tool
 ## Settings for AA-Translate-Tool
 # URL of the self hosted libretranslate instance
 AA_TRANSLATIONS_URL = "http://URL_to_api:5000"
-# Languages we allow in the tool.
-AA_TRANSLATIONS_LANGUAGES = []
+# Optional Api Key
+AA_TRANSLATIONS_API_KEY= "i was generated from libretranslate"
+# Languages we allow in the tool. list of ("Display Name", "language code https://libretranslate.com/languages")
+AA_TRANSLATIONS_LANGUAGES = [] # [("українець", "uk")]
 ```
+
+## Usage
+
+![discord context menu showing app usage](docs/app_usage.png)
+![bot response to clicking the app in the context menu](docs/message.png)
+
+## Libretranslate System Requirements
+
+Seems to be CPU bound using around 2gb of memory. On a 2 core, 4gb instance it takes around a minute to translate 60 words. 
