@@ -42,7 +42,7 @@ dynamic = [
 ]
 dependencies = [
     "allianceauth<5.0.0,>=3",
-    "allianceauth-discordbot<4.0.0,>=3.7.3",
+    "allianceauth-discordbot<5.0.0,>=3.7.3",
     "libretranslatepy<3.0.0,>=2.1.4",
 ]
 [project.urls]
