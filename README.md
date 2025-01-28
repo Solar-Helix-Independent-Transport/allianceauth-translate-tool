@@ -10,10 +10,16 @@ https://github.com/LibreTranslate/LibreTranslate
 
 ## Installation
 
-- Install the app with your venv active
+- Install and setup LibreTranslate from its docs, configure as required.
+
+- Install the app with your venv active or add it to your requirements.txt for Docker
 
 ```bash
 pip install allianceauth-translate-tool
+```
+or 
+```
+allianceauth-translate-tool==version
 ```
 
 - Add `'aatranslate',` to your INSTALLED_APPS list in local.py.
@@ -26,13 +32,14 @@ pip install allianceauth-translate-tool
 AA_TRANSLATIONS_URL = "http://URL_to_api:5000"
 # Optional Api Key
 AA_TRANSLATIONS_API_KEY= "i was generated from libretranslate"
-# Languages we allow in the tool. list of ("Display Name", "language code https://libretranslate.com/languages")
-AA_TRANSLATIONS_LANGUAGES = [] # [("українець", "uk")]
+# Languages we allow in the tool. list of ("Display Name", "language code https://libretranslate.com/languages") or leave as is for defaults
+# AA_TRANSLATIONS_LANGUAGES = []
 ```
 
 ## Usage
 
 ![discord context menu showing app usage](docs/app_usage.png)
+
 ![bot response to clicking the app in the context menu](docs/message.png)
 
 ## Libretranslate System Requirements
