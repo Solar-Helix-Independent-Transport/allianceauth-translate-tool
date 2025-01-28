@@ -42,6 +42,8 @@ AA_TRANSLATIONS_API_KEY= "i was generated from libretranslate"
 
 ![bot response to clicking the app in the context menu](docs/message.png)
 
+![bot response ](docs/translated.png)
+
 ## Libretranslate System Requirements
 
 Seems to be CPU bound using around 2gb of memory. On a 2 core, 4gb instance it takes around a minute to translate 60 words. 
