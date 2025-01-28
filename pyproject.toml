@@ -27,8 +27,6 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -41,7 +39,7 @@ dynamic = [
     "version",
 ]
 dependencies = [
-    "allianceauth<5.0.0,>=3",
+    "allianceauth<5.0.0,>=4",
     "allianceauth-discordbot<5.0.0,>=3.7.3",
     "libretranslatepy<3.0.0,>=2.1.4",
 ]
