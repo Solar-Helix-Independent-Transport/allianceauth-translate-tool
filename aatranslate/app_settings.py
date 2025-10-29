@@ -2,7 +2,7 @@ from django.conf import settings
 
 AA_TRANSLATIONS_LANGUAGES = getattr(
     settings,
-    'AA_TRANSLATIONS_LANGUAGES',
+    "AA_TRANSLATIONS_LANGUAGES",
     [
         ("English", "en"),
         ("Deutsch", "de"),
@@ -13,18 +13,19 @@ AA_TRANSLATIONS_LANGUAGES = getattr(
         ("Français", "fr"),
         ("日本語", "ja"),
         ("Italiano", "it"),
-        ("Українська", "uk")
-    ]
+        ("Українська", "uk"),
+    ],
 )
+
+AA_TRANSLATIONS_PROVIDER = getattr(
+    settings, "AA_TRANSLATIONS_PROVIDER", "libretranslate"
+)
+
 
 AA_TRANSLATIONS_URL = getattr(
-    settings,
-    'AA_TRANSLATIONS_URL',
-    "http://libretranslate:9095"
+    settings, "AA_TRANSLATIONS_URL", "http://libretranslate:9095"
 )
 
-AA_TRANSLATIONS_API_KEY = getattr(
-    settings,
-    'AA_TRANSLATIONS_API_KEY',
-    None
-)
+AA_TRANSLATIONS_API_KEY = getattr(settings, "AA_TRANSLATIONS_API_KEY", None)
+
+AA_TRANSLATIONS_MODEL = getattr(settings, "AA_TRANSLATIONS_MODEL", None)
