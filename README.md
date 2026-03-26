@@ -17,24 +17,40 @@ https://github.com/LibreTranslate/LibreTranslate
 ```bash
 pip install allianceauth-translate-tool
 ```
-or 
+
+or
+
 ```
 allianceauth-translate-tool==version
 ```
 
 - Add `'aatranslate',` to your INSTALLED_APPS list in local.py.
 
-- Add the below lines to your `local.py` settings file, Changing the contexts to yours.
+- Add or update the following settings in your `local.py` file to configure how translations are performed.
 
 ```python
 ## Settings for AA-Translate-Tool
-# URL of the self hosted libretranslate instance
-AA_TRANSLATIONS_URL = "http://URL_to_api:5000"
-# Optional Api Key
-AA_TRANSLATIONS_API_KEY= "i was generated from libretranslate"
+# Translation provider: "libretranslate" (default) or "openai"
+AA_TRANSLATIONS_PROVIDER = "libretranslate"
+
+# Base URL for the translation API endpoint or the openai compatible endpoint
+AA_TRANSLATIONS_URL = "http://libretranslate:9095"
+
+# API key for your provider. Required for "openai", optional for self-hosted LibreTranslate.
+AA_TRANSLATIONS_API_KEY = None
+
+# Model identifier when using the "openai" provider (e.g. "gpt-4o-mini")
+AA_TRANSLATIONS_MODEL = None
+
 # Languages we allow in the tool. list of ("Display Name", "language code https://libretranslate.com/languages") or leave as is for defaults
-# AA_TRANSLATIONS_LANGUAGES = []
+# If using "openai" the second entry in the tuple is what is passed to the model feel free to use the full language name for less ambiguity.
+# AA_TRANSLATIONS_LANGUAGES = [
+# ("English", "en"),
+# ]
 ```
+
+- When using `AA_TRANSLATIONS_PROVIDER = "libretranslate"`, the URL should point at your LibreTranslate instance and the API key can be omitted unless the instance enforces it.
+- When using `AA_TRANSLATIONS_PROVIDER = "openai"`, set the URL to an OpenAI-compatible base URL, provide a valid API key, and configure `AA_TRANSLATIONS_MODEL` with the target model name.
 
 ## Usage
 
@@ -46,4 +62,4 @@ AA_TRANSLATIONS_API_KEY= "i was generated from libretranslate"
 
 ## Libretranslate System Requirements
 
-Seems to be CPU bound using around 2gb of memory. On a 2 core, 4gb instance it takes around a minute to translate 60 words. 
+Seems to be CPU bound using around 2gb of memory. On a 2 core, 4gb instance it takes around a minute to translate 60 words.
