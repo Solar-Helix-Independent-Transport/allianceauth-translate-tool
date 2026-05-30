@@ -31,7 +31,7 @@ dynamic = [
     "version",
 ]
 dependencies = [
-    "allianceauth<5.0.0,>=4",
+    "allianceauth>=4",
     "allianceauth-discordbot<5.0.0,>=3.7.3",
     "libretranslatepy<3.0.0,>=2.1.4",
 ]
